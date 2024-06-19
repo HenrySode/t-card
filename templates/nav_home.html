@@ -1,0 +1,22 @@
+{% load static %}
+<header>
+    <div class="header-side-content">
+        <button class="button" id="menu-button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+
+    <a href="{% url 'home' %}"><b>Ts-Card</b></a>
+    <!-- <img src="{% static 'images/logo-nn-color.svg'%} " alt="Logo"> -->
+   
+    <div class="header-side-content">
+        <nav id="nav-social">
+            <ul class="unstyled">
+                <li><a href="{%url 'login'%}">Login</a></li>
+            
+            </ul>
+        </nav>
+    </div>
+</header>

@@ -1,0 +1,24 @@
+{% extends 'main_dash.html' %}
+
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'styles/dash/style.css' %}">
+
+    <h4>Scan Card</h4>
+    <form method="post" class="form-container">
+        {% csrf_token %}
+        <input type="text" id="code" name="code" placeholder="Enter guest code here">
+        <button type="submit" class="btn btn-success">Scan card</button>
+    </form>
+    <br><br>
+
+    
+ 
+    {% if status %}
+    <div class="status-message">
+    <p>Status: {{ status }}</p>
+    <p>Card Type: {{ card_type }}</p>
+    <a href="{% url 'scan' %}"><button onclick="location.reload();" class="btn btn-primary">Scan again</button></a>
+    {% endif %}
+   </div>
+{% endblock %}

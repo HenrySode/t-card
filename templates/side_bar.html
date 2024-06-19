@@ -1,0 +1,53 @@
+{% load static %}
+
+<div class="wrapper">
+    <aside id="sidebar">
+        <div class="d-flex">
+            <button class="toggle-btn" type="button">
+                <i class="lni lni-menu"></i>
+            </button>
+            <div class="sidebar-logo">
+                <a href="#">Ts-Card</a>
+            </div>
+        </div>
+
+        <ul class="sidebar-nav">
+            <li class="sidebar-item">
+                <a href="{% url 'events' %}" class="sidebar-link">
+                    <i class="lni lni-grid-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+      
+
+            <li class="sidebar-item">
+                <a href="{% url 'guests'  %}" class="sidebar-link">
+                    <i class="lni lni-customer"></i>
+                    <span>Inveted Guests</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="{% url 'scan' %}" class="sidebar-link">
+                    <i class="lni lni-target-revenue"></i>
+                    <span>Scan Card</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="{% url 'profile' %}" class="sidebar-link">
+                    <i class="lni lni-user"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+            
+           
+           
+          
+        </ul>
+        <div class="sidebar-footer">
+            <a href="{% url 'home' %}" class="sidebar-link">
+                <i class="lni lni-exit"></i>
+                <span>Logout</span>
+            </a>
+        </div>
+    </aside>
+
