@@ -23,3 +23,12 @@ hamBurger.addEventListener("click", function () {
     localStorage.setItem("sidebarState", "collapsed");
   }
 });
+
+// Upload form 
+// function showModal() {
+//   document.getElementById('modal-overlay').style.display = 'flex';
+// }
+
+// function hideModal() {
+//   document.getElementById('modal-overlay').style.display = 'none';
+// }

@@ -1,0 +1,19 @@
+{% extends 'main_dash.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<div class="form-container">
+    <h1>Register your event<a href="{% url 'guests' %}" class="close-form">X</a></h1>
+    <form>
+        <div class="mb-3">
+            
+            {{form}}
+        </div>
+    
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+{% endblock %}

@@ -1,14 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Upload Data</title>
-</head>
-<body>
-    <h1>Upload Data</h1>
+
+{% extends 'main_dash.html' %}
+
+{% load static %}
+{% block content %}
+
+<div class="form-upload">
+    <h1>Upload Excel File<a href="{% url 'guests' %}" class="close-form">X</a></h1>
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Upload</button>
     </form>
-</body>
-</html>
+    <button type="submit" class="btn btn-success">Submit Guests</button>
+</div>
+{% endblock %}

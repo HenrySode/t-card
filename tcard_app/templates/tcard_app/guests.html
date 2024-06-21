@@ -8,7 +8,8 @@
 <h3 class="fw-bold fs-4 my-3" style="padding-left: 1rem;">Inveted guests list
     <br>
     <hr>
-    <button type="button" class="btn btn-outline-success"><i class="fas fa-file-excel"></i>    upload excel</button>
+   <a href="{% url 'upload' %}"> <button type="button" class="btn btn-outline-success"><i class="fas fa-file-excel"></i>    upload excel</button></a>
+   <a href="{% url 'add_guest' %}"> <button type="button" class="btn btn-primary"><i class="fas fa-plus"></i>   Add guest</button></a>
 </h3>
 
 <div class="row" style="padding-left: 1rem; padding-right: 1rem;">

@@ -4,20 +4,21 @@
             <main class="content px-3 py-4">
                 <div class="container-fluid">
                     <div class="mb-3">
-                        <h3 class="fw-bold fs-5 mb-3" style="color: green;">Event Dashboard</h3>
-                        <h3 class="fw-bold fs-3 mb-3">SERENGETI TOUR</h3>
+                        <h3 class="fw-bold fs-5 mb-3" style="color: green;">Event Details Dashboard</h3>
+                        <p class="fw-bold fs-3 mb-3">
+                            No event registered: <a href="{% url 'register_event' %}"> <button type="button" class="btn btn-outline-success"><i class="fas fa-calendar-plus"></i> Register event</button></a>
+                        </p>
                         <div class="row">
                             <div class="col-12 col-md-4 ">
                                 <div class="card border-0">
                                     <div class="card-body py-4">
                                         <h5 class="mb-2 fw-bold">
-                                            Total Single cards
+                                            Total Cards
                                         </h5>
                                         <h2 class="mb-2 fw-bold" style="color: green;">
-                                            25
+                                            {{ total_cards }}
                                         </h2>
-                            
-                                        
+                              
                                     </div>
                                 </div>
                             </div>
@@ -25,12 +26,12 @@
                                 <div class="card border-0">
                                     <div class="card-body py-4">
                                         <h5 class="mb-2 fw-bold">
-                                            Total Double Cards
+                                            Scanned (Single)
                                         </h5>
                                         <h2 class="mb-2 fw-bold" style="color: green;">
-                                            250
+                                            {{ scanned_single }}
                                         </h2>
-                                   
+                              
                                     </div>
                                 </div>
                             </div>
@@ -38,64 +39,49 @@
                                 <div class="card border-0">
                                     <div class="card-body py-4">
                                         <h5 class="mb-2 fw-bold">
-                                            Total Invited Guests
+                                            Scanned (Double):
                                         </h5>
                                         <h2 class="mb-2 fw-bold" style="color: green;">
-                                            275
+                                            {{ scanned_double }}
                                         </h2>
+                              
                                     </div>
                                 </div>
                             </div>
+                           
                         </div>
-                        <br><br><br>
-                        <p class="fw-bold fs-4 mb-3">Scanned Card</p>
+
+                        <hr style="color: rgb(24, 24, 49);">
                         <div class="row">
                             <div class="col-12 col-md-4 ">
-                                <div class="card border-0">
-                                    <div class="card-body py-4">
-                                        <h5 class="mb-2 fw-bold">
-                                            Scanned Single cards
-                                        </h5>
-                                        <h2 class="mb-2 fw-bold" style="color: green;">
-                                            12
-                                        </h2>
-                                   
-                                    </div>
+                            <div class="card border-0">
+                                <div class="card-body py-4">
+                                    <h5 class="mb-2 fw-bold">
+                                        Remaining
+                                    </h5>
+                                    <h2 class="mb-2 fw-bold" style="color: green;">
+                                        {{ remaining }}
+                                    </h2>
+                          
                                 </div>
                             </div>
-                            <div class="col-12 col-md-4 ">
-                                <div class="card border-0">
-                                    <div class="card-body py-4">
-                                        <h5 class="mb-2 fw-bold">
-                                            Scanned double cards
-                                        </h5>
-                                        <h2 class="mb-2 fw-bold" style="color: green;">
-                                            123
-                                        </h2>
-                                   
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-4 ">
-                                <div class="card border-0">
-                                    <div class="card-body py-4">
-                                        <h5 class="mb-2 fw-bold">
-                                            Total card scaaned
-                                        </h5>
-                                        <h2 class="mb-2 fw-bold" style="color: green;">
-                                            135
-                                        </h2>
-                                   
-                                    </div>
-                                </div>
-                            </div>
- 
                         </div>
+                    </div>
                         
+<br>
+                        <a href="{% url 'scan' %}" class="btn btn-success">Scan Cards</a>
+                   
                     </div>
                 </div>
             </main>
             
         
+            
+            
+                
+             
+                
+                
+            
   
     {% endblock %}
